@@ -1,0 +1,17 @@
+**/traces/
+*.champsimtrace.xz
+
+**/bin/
+**/obj/
+*.o
+*.opt
+champsim
+executable_*
+
+**/vcpkg/
+
+*.txt
+*.csv
+
+gem5_setup/gem5/build/
+gem5_setup/gem5/.sconsign.dblite
