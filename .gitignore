@@ -8,10 +8,10 @@
 champsim
 executable_*
 
-**/vcpkg/
 
 *.txt
 *.csv
+*.log
 
 gem5_setup/gem5/build/
 gem5_setup/gem5/.sconsign.dblite

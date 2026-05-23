@@ -21,13 +21,13 @@
       "lq_width": 2,
       "sq_width": 2,
       "retire_width": 5,
-      "mispredict_penalty": 1,
+      "mispredict_penalty": 12,
       "scheduler_size": 128,
       "decode_latency": 1,
       "dispatch_latency": 1,
       "schedule_latency": 0,
       "execute_latency": 0,
-      "branch_predictor": "bimodal",
+      "branch_predictor": "pap",
       "btb": "basic_btb"
     }
   ],
@@ -80,7 +80,7 @@
     "virtual_prefetch": false,
     "prefetch_activate": "LOAD,PREFETCH",
     "prefetcher": "no",
-    "replacement": "lip"
+    "replacement": "plru"
   },
   "ITLB": {
     "sets": 16,
@@ -147,7 +147,7 @@
     "virtual_prefetch": false,
     "prefetch_activate": "LOAD,PREFETCH",
     "prefetcher": "no",
-    "replacement": "plru"
+    "replacement": "lru"
   },
   "physical_memory": {
     "data_rate": 3200,

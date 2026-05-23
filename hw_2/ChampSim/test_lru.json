@@ -4,6 +4,7 @@
   "page_size": 4096,
   "heartbeat_frequency": 10000000,
   "num_cores": 1,
+
   "ooo_cpu": [
     {
       "frequency": 4000,
@@ -21,21 +22,23 @@
       "lq_width": 2,
       "sq_width": 2,
       "retire_width": 5,
-      "mispredict_penalty": 1,
+      "mispredict_penalty": 12,
       "scheduler_size": 128,
       "decode_latency": 1,
       "dispatch_latency": 1,
       "schedule_latency": 0,
       "execute_latency": 0,
-      "branch_predictor": "bimodal",
+      "branch_predictor": "pap",
       "btb": "basic_btb"
     }
   ],
+
   "DIB": {
     "window_size": 16,
     "sets": 32,
     "ways": 8
   },
+
   "L1I": {
     "sets": 64,
     "ways": 8,
@@ -51,6 +54,7 @@
     "prefetch_activate": "LOAD,PREFETCH",
     "prefetcher": "no"
   },
+
   "L1D": {
     "sets": 64,
     "ways": 12,
@@ -66,6 +70,7 @@
     "prefetch_activate": "LOAD,PREFETCH",
     "prefetcher": "no"
   },
+
   "L2C": {
     "sets": 1024,
     "ways": 8,
@@ -80,8 +85,9 @@
     "virtual_prefetch": false,
     "prefetch_activate": "LOAD,PREFETCH",
     "prefetcher": "no",
-    "replacement": "lip"
+    "replacement": "lru"
   },
+
   "ITLB": {
     "sets": 16,
     "ways": 4,
@@ -94,6 +100,7 @@
     "max_fill": 2,
     "prefetch_as_load": false
   },
+
   "DTLB": {
     "sets": 16,
     "ways": 4,
@@ -106,6 +113,7 @@
     "max_fill": 2,
     "prefetch_as_load": false
   },
+
   "STLB": {
     "sets": 128,
     "ways": 12,
@@ -118,6 +126,7 @@
     "max_fill": 1,
     "prefetch_as_load": false
   },
+
   "PTW": {
     "pscl5_set": 1,
     "pscl5_way": 2,
@@ -132,6 +141,7 @@
     "max_read": 2,
     "max_write": 2
   },
+
   "LLC": {
     "frequency": 4000,
     "sets": 2048,
@@ -147,8 +157,9 @@
     "virtual_prefetch": false,
     "prefetch_activate": "LOAD,PREFETCH",
     "prefetcher": "no",
-    "replacement": "plru"
+    "replacement": "lru"
   },
+
   "physical_memory": {
     "data_rate": 3200,
     "channels": 1,
@@ -167,6 +178,7 @@
     "refresh_period": 32,
     "refreshes_per_period": 8192
   },
+
   "virtual_memory": {
     "pte_page_size": 4096,
     "num_levels": 5,

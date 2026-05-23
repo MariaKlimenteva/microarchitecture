@@ -3,11 +3,12 @@
 
 #include <vector>
 
-#include "cache.h"
-#include "modules.h"
+#include "../../inc/cache.h"
+#include "../../inc/modules.h"
 
 class lru : public champsim::modules::replacement
 {
+protected:
   long NUM_WAY;
   std::vector<uint64_t> last_used_cycles;
   uint64_t cycle = 0;
